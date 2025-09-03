@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const formBody = recordForm;
 
   function renderSchedule(items) {
-    //scheduleContainer.innerHTML = '';
+    scheduleContainer.innerHTML = '';
     if (items.length === 0) {
       scheduleContainer.innerHTML = '<p class="text-muted">Нет подходящих мероприятий</p>';
       return;
