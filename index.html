@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Фитнес-клуб</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f8f9fa;
+    }
+    .bg-dark-green { background-color: #05201d !important; }
+    .text-dark-green { color: #05201d; }
+    .btn-green {
+      background-color: #05201d;
+      color: #fff;
+      border: none;
+    }
+    .btn-green:hover {
+      background-color: #03302b;
+    }
+    .carousel-item {
+      height: 50vh;
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+    .carousel-caption {
+      background: rgba(5, 32, 29, 0.7);
+      padding: 1rem;
+      border-radius: 5px;
+    }
+    .clock-hand {
+    animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Навбар -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark-green">
+  <div class="container">
+    <a class="navbar-brand" href="#"><i class="bi bi-lightning-fill"></i> FitClub</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#directions">Направления</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#form">Запись</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Карусель -->
+<div id="carousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://i.pinimg.com/originals/f2/d1/eb/f2d1eb5ddb9cbf66dc4a1b7ad7d06b7b.png" class="d-block w-100" alt="Слайд 1">
+      <div class="carousel-caption"><h3>Движение — это жизнь</h3></div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://backcountryskiservices.co.uk/wp-content/uploads/2023/11/img-18.jpg" class="d-block w-100" alt="Слайд 2">
+      <div class="carousel-caption"><h3>Тренируйся с комфортом</h3></div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" data-bs-target="#carousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+  <button class="carousel-control-next" data-bs-target="#carousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+</div>
+
+<div class="container py-5">
+  <!-- Новый блок: Направления -->
+  <h2 class="text-center text-dark-green mb-4" id="directions">Наши направления</h2>
+  <div class="row">
+    <div class="col-md-4 mb-3">
+      <div class="card">
+        <div class="card-body text-center">
+          <i class="bi bi-heart-pulse-fill fs-1 text-dark-green"></i>
+          <h5 class="card-title mt-2">Кардио</h5>
+          <p>Бег, эллипсы и зумба — тренируем сердце и сжигаем жир.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card">
+        <div class="card-body text-center">
+          <i class="bi bi-person-fill-up fs-1 text-dark-green"></i>
+          <h5 class="card-title mt-2">Силовые</h5>
+          <p>Тренажёры, штанги, гири — для силы и формы.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card">
+        <div class="card-body text-center">
+          <i class="bi bi-stars fs-1 text-dark-green"></i>
+          <h5 class="card-title mt-2">Релакс</h5>
+          <p>Йога и растяжка — гармония тела и разума.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Аккордеон -->
+  <h3 class="text-dark-green mt-5" id="faq">Частые вопросы</h3>
+  <div class="accordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q1">Нужно ли приносить форму?</button></h2>
+      <div id="q1" class="accordion-collapse collapse show"><div class="accordion-body">Да, желательно иметь сменную одежду и обувь.</div></div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q2">Есть ли душ и шкафчики?</button></h2>
+      <div id="q2" class="accordion-collapse collapse"><div class="accordion-body">Да, доступно всем посетителям клуба.</div></div>
+    </div>
+  </div>
+
+  <!-- Таблица -->
+  <h3 class="text-dark-green mt-5">Абонементы</h3>
+  <table class="table table-bordered">
+    <thead><tr><th>Тип</th><th>Срок</th><th>Цена</th></tr></thead>
+    <tbody>
+      <tr><td>Месячное</td><td>30 дней</td><td>3 000₽</td></tr>
+      <tr><td>3-ёх Месячное</td><td>90 дней</td><td>7 500₽</td></tr>
+      <tr><td>Годовое</td><td>365 дней</td><td>25 500₽</td></tr>
+    </tbody>
+  </table>
+
+<div class="container py-4">
+  <h2 class="text-dark-green text-center mb-4">Расписание мероприятий</h2>
+
+  <div class="row mb-3">
+    <div class="col-md-4"><input type="date" id="filter-date" class="form-control"></div>
+    <div class="col-md-4">
+      <select id="filter-type" class="form-select">
+        <option value="">Все типы</option>
+        <option>Кардио</option>
+        <option>Силовые</option>
+        <option>Йога</option>
+      </select>
+    </div>
+    <div class="col-md-4 form-check">
+      <input class="form-check-input" type="checkbox" id="filter-free">
+      <label class="form-check-label" for="filter-free">Только со свободными местами</label>
+    </div>
+  </div>
+
+  <div class="row" id="schedule-items"></div>
+
+  <div id="record-section" class="mt-5" style="display: none;">
+    <div class="card">
+      <div class="card-body text-center">
+        <h5>Запись на: <span id="selected-event-name"></span></h5>
+        <form id="record-form" data-id="">
+          <div class="mb-3">
+            <label for="abonement-number">Номер абонемента:</label>
+            <input type="text" id="abonement-number" class="form-control" required placeholder="1234">
+          </div>
+          <button class="btn btn-green" type="submit">Записаться</button>
+        </form>
+  
+        <!-- Анимированные часы -->
+        <div id="clock" style="display: none; text-align: center; padding: 20px;">
+          <svg width="80" height="80" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="45" stroke="#4caf50" stroke-width="5" fill="none" />
+            <line x1="50" y1="50" x2="50" y2="20"
+                  stroke="#4caf50" stroke-width="4"
+                  transform-origin="50 50"
+                  class="clock-hand" />
+          </svg>
+        </div>
+  
+        <h4 id="success-text" class="text-success mt-3" style="display: none;">Записаны!</h4>
+      </div>
+    </div>
+  </div>
+
+  <!-- Пагинация -->
+  <nav class="mt-5">
+    <ul class="pagination justify-content-center">
+      <li class="page-item disabled"><a class="page-link">Назад</a></li>
+      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">Вперёд</a></li>
+    </ul>
+  </nav>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
